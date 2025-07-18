@@ -1,0 +1,1008 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Currículo Online - Advogado e Especialista em Governança</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+
+        .header {
+            background: rgba(255, 255, 255, 0.95);
+            backdrop-filter: blur(10px);
+            border-radius: 20px;
+            padding: 40px;
+            text-align: center;
+            margin-bottom: 30px;
+            box-shadow: 0 15px 35px rgba(0, 0, 0, 0.1);
+        }
+
+        .profile-img {
+            width: 150px;
+            height: 150px;
+            border-radius: 50%;
+            background: linear-gradient(135deg, #667eea, #764ba2);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto 20px;
+            font-size: 60px;
+            color: white;
+        }
+
+        .name {
+            font-size: 2.5em;
+            font-weight: 700;
+            color: #2c3e50;
+            margin-bottom: 10px;
+        }
+
+        .title {
+            font-size: 1.3em;
+            color: #667eea;
+            margin-bottom: 20px;
+        }
+
+        .contact-info {
+            display: flex;
+            justify-content: center;
+            gap: 30px;
+            flex-wrap: wrap;
+            margin-top: 20px;
+        }
+
+        .contact-item {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            color: #555;
+        }
+
+        .contact-item i {
+            color: #667eea;
+        }
+
+        .main-content {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 30px;
+        }
+
+        .section {
+            background: rgba(255, 255, 255, 0.95);
+            backdrop-filter: blur(10px);
+            border-radius: 15px;
+            padding: 30px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+            margin-bottom: 30px;
+        }
+
+        .section h2 {
+            color: #2c3e50;
+            font-size: 1.8em;
+            margin-bottom: 20px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .section h2 i {
+            color: #667eea;
+        }
+
+        .experience-item {
+            border-left: 4px solid #667eea;
+            padding-left: 20px;
+            margin-bottom: 25px;
+            position: relative;
+        }
+
+        .experience-item::before {
+            content: '';
+            position: absolute;
+            left: -8px;
+            top: 0;
+            width: 12px;
+            height: 12px;
+            background: #667eea;
+            border-radius: 50%;
+        }
+
+        .job-title {
+            font-size: 1.2em;
+            font-weight: 600;
+            color: #2c3e50;
+            margin-bottom: 5px;
+        }
+
+        .company {
+            font-weight: 600;
+            color: #667eea;
+            margin-bottom: 5px;
+        }
+
+        .period {
+            color: #888;
+            font-size: 0.9em;
+            margin-bottom: 10px;
+        }
+
+        .location {
+            color: #666;
+            font-size: 0.9em;
+            margin-bottom: 10px;
+            font-style: italic;
+        }
+
+        .responsibilities {
+            list-style: none;
+            margin-top: 10px;
+        }
+
+        .responsibilities li {
+            padding: 5px 0;
+            padding-left: 20px;
+            position: relative;
+        }
+
+        .responsibilities li::before {
+            content: '▸';
+            position: absolute;
+            left: 0;
+            color: #667eea;
+            font-weight: bold;
+        }
+
+        .education-item {
+            border-left: 4px solid #764ba2;
+            padding-left: 20px;
+            margin-bottom: 20px;
+            position: relative;
+        }
+
+        .education-item::before {
+            content: '';
+            position: absolute;
+            left: -8px;
+            top: 0;
+            width: 12px;
+            height: 12px;
+            background: #764ba2;
+            border-radius: 50%;
+        }
+
+        .degree {
+            font-weight: 600;
+            color: #2c3e50;
+            margin-bottom: 5px;
+        }
+
+        .institution {
+            color: #764ba2;
+            font-weight: 600;
+            margin-bottom: 5px;
+        }
+
+        .certifications-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 20px;
+            margin-bottom: 30px;
+        }
+
+        .cert-category {
+            background: rgba(102, 126, 234, 0.05);
+            border: 1px solid rgba(102, 126, 234, 0.2);
+            padding: 20px;
+            border-radius: 15px;
+            border-left: 4px solid #667eea;
+        }
+
+        .cert-category h3 {
+            color: #2c3e50;
+            margin-bottom: 15px;
+            font-size: 1.1em;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .cert-category h3 i {
+            color: #667eea;
+            font-size: 1.2em;
+        }
+
+        .cert-list {
+            list-style: none;
+        }
+
+        .cert-list li {
+            padding: 12px 0;
+            border-bottom: 1px solid rgba(102, 126, 234, 0.1);
+            display: flex;
+            flex-direction: column;
+            gap: 4px;
+        }
+
+        .cert-list li:last-child {
+            border-bottom: none;
+        }
+
+        .cert-list li strong {
+            color: #2c3e50;
+            font-size: 0.95em;
+        }
+
+        .cert-issuer {
+            color: #667eea;
+            font-weight: 600;
+            font-size: 0.85em;
+        }
+
+        .cert-date {
+            color: #888;
+            font-size: 0.8em;
+        }
+
+        .skills-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 15px;
+        }
+
+        .skill-category {
+            background: rgba(102, 126, 234, 0.1);
+            padding: 15px;
+            border-radius: 10px;
+            border-left: 4px solid #667eea;
+        }
+
+        .skill-category h3 {
+            color: #2c3e50;
+            margin-bottom: 10px;
+            font-size: 1.1em;
+        }
+
+        .skill-category ul {
+            list-style: none;
+        }
+
+        .skill-category li {
+            padding: 3px 0;
+            color: #555;
+        }
+
+        .full-width {
+            grid-column: 1 / -1;
+        }
+
+        .complementary-education-item {
+            border-left: 4px solid #4CAF50;
+            padding-left: 20px;
+            margin-bottom: 15px;
+            position: relative;
+        }
+
+        .complementary-education-item::before {
+            content: '';
+            position: absolute;
+            left: -8px;
+            top: 0;
+            width: 12px;
+            height: 12px;
+            background: #4CAF50;
+            border-radius: 50%;
+        }
+
+        .course-title {
+            font-weight: 600;
+            color: #2c3e50;
+            margin-bottom: 5px;
+        }
+
+        .hours {
+            color: #666;
+            font-size: 0.85em;
+            margin-bottom: 5px;
+        }
+
+        @media (max-width: 768px) {
+            .main-content {
+                grid-template-columns: 1fr;
+            }
+            
+            .contact-info {
+                flex-direction: column;
+                align-items: center;
+                gap: 15px;
+            }
+            
+            .name {
+                font-size: 2em;
+            }
+            
+            .container {
+                padding: 10px;
+            }
+            
+            .header {
+                padding: 20px;
+            }
+        }
+
+        .print-btn {
+            position: fixed;
+            bottom: 30px;
+            right: 30px;
+            background: #667eea;
+            color: white;
+            border: none;
+            padding: 15px;
+            border-radius: 50%;
+            font-size: 20px;
+            cursor: pointer;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+            transition: all 0.3s ease;
+        }
+
+        .print-btn:hover {
+            background: #5a6fd8;
+            transform: scale(1.1);
+        }
+
+        @media print {
+            body {
+                background: white;
+            }
+            
+            .section {
+                box-shadow: none;
+                border: 1px solid #ddd;
+            }
+            
+            .print-btn {
+                display: none;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header class="header">
+            <div class="profile-img">
+                <img src="perfil.jpg" alt="Foto de Emílio de Freitas" style="width: 100%; height: 100%; object-fit: cover; border-radius: 50%;">
+            </div>
+            <h1 class="name">Emílio de Freitas</h1>
+            <p class="title">Advogado - 105.866 OAB/RS | Ciência de Dados | LLM | Licenciatura em Computação e Robótica</p>
+            <div class="contact-info">
+                <div class="contact-item">
+                    <i class="fas fa-map-marker-alt"></i>
+                    <span>Porto Alegre, RS</span>
+                </div>
+                <div class="contact-item">
+                    <i class="fas fa-envelope"></i>
+                    <span>defesapoa@gmail.com</span>
+                </div>
+                <div class="contact-item">
+                    <i class="fas fa-phone"></i>
+                    <span>(51) 98157-4837</span>
+                </div>
+                <div class="contact-item">
+                    <i class="fas fa-balance-scale"></i>
+                    <span>OAB/RS 105.866</span>
+                </div>
+            </div>
+        </header>
+
+        <main class="main-content">
+            <section class="section">
+                <h2><i class="fas fa-briefcase"></i> Experiência Profissional</h2>
+                
+                    <div class="experience-item">
+                    <div class="job-title">Advogado Associado</div>
+                    <div class="company">Pereira e Gionédis Advogados</div>
+                    <div class="period">julho de 2025 - Presente</div>
+                    <div class="location">Porto Alegre, Rio Grande do Sul, Brasil</div>
+                    <ul class="responsibilities">
+                        <li>Atuar com ações do contencioso e negocial.</li>
+                     </ul>
+                </div>
+
+		<div class="experience-item">
+                    <div class="job-title">Advogado</div>
+                    <div class="company">Justiça Federal do Rio Grande do Sul</div>
+                    <div class="period">junho de 2024 - Presente (1 ano 2 meses)</div>
+                    <div class="location">Porto Alegre, Rio Grande do Sul, Brasil</div>
+                    <ul class="responsibilities">
+                        <li>Prestar serviço como advogado voluntário (ad hoc) na área de Direito Previdenciário e Cível</li>
+                        <li>Realizar o juizamento de ações através do convênio CNJ e AJV da Justiça Federal de Porto Alegre</li>
+                        <li>Analisar e investigar correlações jurídicas por meio da mineração de dados e classificação automatizada através de algoritmos (SVM e Random Forest)</li>
+                    </ul>
+                </div>
+
+                <div class="experience-item">
+                    <div class="job-title">Assessor Executivo de Governança Corporativa</div>
+                    <div class="company">Brasil TecPar</div>
+                    <div class="period">novembro de 2021 - junho de 2024 (2 anos 8 meses)</div>
+                    <div class="location">Porto Alegre, Rio Grande do Sul, Brasil</div>
+                    <ul class="responsibilities">
+                        <li>Gestão de demandas administrativas da diretoria, incluindo suporte a viagens corporativas</li>
+                        <li>Organização e manutenção de arquivos físicos e digitais, controle documental</li>
+                        <li>Apoio direto à Diretoria Executiva e aos Conselhos</li>
+                        <li>Revisão e confecção de contratos com fornecedores da Holding Brasil TecPar</li>
+                        <li>Assessoramento aos Comitês responsáveis pela elaboração de políticas na área de governança, LGPD e ESG</li>
+                    </ul>
+                </div>
+
+                <div class="experience-item">
+                    <div class="job-title">Advogado Sênior</div>
+                    <div class="company">Tribunal Regional Federal da 4ª Região</div>
+                    <div class="period">abril de 2017 - novembro de 2021 (4 anos 8 meses)</div>
+                    <div class="location">Porto Alegre e Região, Brasil</div>
+                    <ul class="responsibilities">
+                        <li>Atuar como advogado na AJV/CNJ</li>
+                        <li>Efetuar, como advogado dativo, o ajuizamento de ações na Justiça Federal</li>
+                        <li>Representar as partes em audiências</li>
+                        <li>Realizar negociações, pesquisa de jurisprudência e acordos judiciais</li>
+                    </ul>
+                </div>
+
+                <div class="experience-item">
+                    <div class="job-title">Conciliador Judicial</div>
+                    <div class="company">Tribunal de Justiça do RS</div>
+                    <div class="period">janeiro de 2017 - novembro de 2021 (4 anos 11 meses)</div>
+                    <div class="location">Porto Alegre e Região, Brasil</div>
+                    <ul class="responsibilities">
+                        <li>Atuar como Conciliador Cível em audiências do Fórum Central de Porto Alegre e Fórum de Canoas</li>
+                        <li>Prestar atendimento pré-processual</li>
+                        <li>Buscar a solução dos conflitos através do acordo entre as partes</li>
+                    </ul>
+                </div>
+            </section>
+
+            <section class="section">
+                <h2><i class="fas fa-graduation-cap"></i> Formação Acadêmica</h2>
+                
+                <div class="education-item">
+                    <div class="degree">Licenciatura em Computação e Robótica Educativa</div>
+                    <div class="institution">Universidade Federal do Rio Grande do Sul</div>
+                    <div class="period">janeiro de 2024 - agosto de 2027</div>
+                </div>
+
+                <div class="education-item">
+                    <div class="degree">Ciência de Dados na Administração Pública</div>
+                    <div class="institution">Universidade Federal de Santa Maria</div>
+                    <div class="period">junho de 2023 - dezembro de 2024</div>
+                </div>
+
+                <div class="education-item">
+                    <div class="degree">Pós-graduação em Gestão Empresarial</div>
+                    <div class="institution">IFRS - Campus Porto Alegre</div>
+                    <div class="period">março de 2023 - julho de 2024</div>
+                </div>
+
+                <div class="education-item">
+                    <div class="degree">Especialização em Gestão de Políticas Públicas</div>
+                    <div class="institution">Universidade Federal de Santa Maria</div>
+                    <div class="period">março de 2021 - julho de 2022</div>
+                </div>
+
+                <div class="education-item">
+                    <div class="degree">Bacharel em Direito</div>
+                    <div class="institution">Fargs - Faculdades Riograndenses</div>
+                    <div class="period">2007 - 2012</div>
+                </div>
+
+
+                <h2><i class="fas fa-graduation-cap"></i> Trabalhos técnicos</h2>
+
+ <div class="education-item">
+                    <li>Perícia técnica no processo nº. 0011.18.0087330-2. 2019.</li>
+                    <li>Perícia técnica no processo nº. 0011.07.0245886-8. 2018.</li>
+                    <li>Collecting Annual Visitation Numbers for the World Heritage Sites. 2012. ONU</li>
+ 		    <li>State of the World's Volunteerism Report. 2012. ONU</li>
+                </div>
+
+	    </section>
+
+            <section class="section full-width">
+                <h2><i class="fas fa-certificate"></i> Formação Complementar</h2>
+                
+                <!-- 2025 -->
+                <div class="complementary-education-item">
+                    <div class="course-title">Extensão universitária em Introdução às Singularidades via Teoria das Catástrofes</div>
+                    <div class="institution">Universidade de São Paulo, USP</div>
+                    <div class="period">2025 - 2025</div>
+                    <div class="hours">Carga horária: 20h</div>
+                </div>
+                
+                <div class="complementary-education-item">
+                    <div class="course-title">Extensão universitária em Guia de Inteligência Artificial para Iniciantes</div>
+                    <div class="institution">Instituto Federal de Educação, Ciência e Tecnologia do Sul de Minas Gerais, IFSULDEMINAS</div>
+                    <div class="period">2025 - 2025</div>
+                    <div class="hours">Carga horária: 20h</div>
+                </div>
+                
+                <div class="complementary-education-item">
+                    <div class="course-title">Extensão universitária em Introdução às teorias do fascismo alemão na Escola de Frankfurt</div>
+                    <div class="institution">Universidade de São Paulo, USP</div>
+                    <div class="period">2025 - 2025</div>
+                    <div class="hours">Carga horária: 10h</div>
+                </div>
+                
+                <div class="complementary-education-item">
+                    <div class="course-title">Extensão universitária em Acessibilidade na Educação Profissional e Tecnológica e na Educação Superior</div>
+                    <div class="institution">Universidade Federal de Santa Maria, UFSM</div>
+                    <div class="period">2025 - 2025</div>
+                    <div class="hours">Carga horária: 80h</div>
+                </div>
+                
+                <div class="complementary-education-item">
+                    <div class="course-title">Extensão universitária em História e arqueologia da colonização grega na Croácia</div>
+                    <div class="institution">Universidade de São Paulo, USP</div>
+                    <div class="period">2025 - 2025</div>
+                    <div class="hours">Carga horária: 10h</div>
+                </div>
+                
+                <div class="complementary-education-item">
+                    <div class="course-title">Extensão universitária em Inteligência Artificial Generativa em Marketing</div>
+                    <div class="institution">Universidade de São Paulo, USP</div>
+                    <div class="period">2025 - 2025</div>
+                    <div class="hours">Carga horária: 10h</div>
+                </div>
+                
+                <div class="complementary-education-item">
+                    <div class="course-title">Extensão universitária em Inteligência Emocional e Inteligência Artificial</div>
+                    <div class="institution">Universidade Federal de Santa Maria, UFSM</div>
+                    <div class="period">2025 - 2025</div>
+                    <div class="hours">Carga horária: 80h</div>
+                </div>
+                
+                <div class="complementary-education-item">
+                    <div class="course-title">Extensão universitária em Editoração na Escola</div>
+                    <div class="institution">Universidade Federal de Santa Maria, UFSM</div>
+                    <div class="period">2025 - 2025</div>
+                    <div class="hours">Carga horária: 60h</div>
+                </div>
+                
+                <div class="complementary-education-item">
+                    <div class="course-title">Extensão universitária em Arquiteturas de Redes para Iniciantes com Wireshark</div>
+                    <div class="institution">Universidade Federal de Santa Maria, UFSM</div>
+                    <div class="period">2025 - 2025</div>
+                    <div class="hours">Carga horária: 20h</div>
+                </div>
+                
+                <div class="complementary-education-item">
+                    <div class="course-title">Extensão universitária em Investigação de Insumos Agrícolas Ilegais</div>
+                    <div class="institution">Universidade de São Paulo, USP</div>
+                    <div class="period">2025 - 2025</div>
+                    <div class="hours">Carga horária: 30h</div>
+                </div>
+                
+                <div class="complementary-education-item">
+                    <div class="course-title">Extensão universitária em Da literatura à vida conjugal: o casal Liev Tolstói e Sofia Tolstáia</div>
+                    <div class="institution">Universidade de São Paulo, USP</div>
+                    <div class="period">2025 - 2025</div>
+                    <div class="hours">Carga horária: 10h</div>
+                </div>
+                
+                <div class="complementary-education-item">
+                    <div class="course-title">Introdução às Redes Complexas, com aplicações, utilizando Python e IA/LLM</div>
+                    <div class="institution">Universidade de São Paulo, USP</div>
+                    <div class="period">2025 - 2025</div>
+                    <div class="hours">Carga horária: 20h</div>
+                </div>
+                
+                <div class="complementary-education-item">
+                    <div class="course-title">Introdução aos Grafos Infinitos</div>
+                    <div class="institution">Universidade de São Paulo, USP</div>
+                    <div class="period">2025 - 2025</div>
+                    <div class="hours">Carga horária: 15h</div>
+                </div>
+                
+                <div class="complementary-education-item">
+                    <div class="course-title">Introdução à literatura chinesa traduzida</div>
+                    <div class="institution">Universidade de São Paulo, USP</div>
+                    <div class="period">2025 - 2025</div>
+                    <div class="hours">Carga horária: 10h</div>
+                </div>
+                
+                <!-- 2024 -->
+                <div class="complementary-education-item">
+                    <div class="course-title">Extensão universitária em Compliance Concorrencial</div>
+                    <div class="institution">Escola Nacional de Administração Pública, ENAP</div>
+                    <div class="period">2024 - 2024</div>
+                    <div class="hours">Carga horária: 22h</div>
+                </div>
+                
+                <!-- 2023 -->
+                <div class="complementary-education-item">
+                    <div class="course-title">Extensão universitária em Integridade acadêmica na era da inteligência artificial</div>
+                    <div class="institution">Universidade Federal de São Paulo, UNIFESP</div>
+                    <div class="period">2023 - 2023</div>
+                    <div class="hours">Carga horária: 1h</div>
+                </div>
+                
+                <div class="complementary-education-item">
+                    <div class="course-title">Extensão universitária em Diálogos sobre Politica de Educação: Inovação Tecnológica e Digital na Gest</div>
+                    <div class="institution">Universidade Federal de São Paulo, UNIFESP</div>
+                    <div class="period">2023 - 2023</div>
+                    <div class="hours">Carga horária: 2h</div>
+                </div>
+                
+                <div class="complementary-education-item">
+                    <div class="course-title">Extensão universitária em Docência e inteligência artificial</div>
+                    <div class="institution">Universidade Federal de São Paulo, UNIFESP</div>
+                    <div class="period">2023 - 2023</div>
+                    <div class="hours">Carga horária: 2h</div>
+                </div>
+                
+                <div class="complementary-education-item">
+                    <div class="course-title">Extensão universitária em Assistente de Produção Cultural</div>
+                    <div class="institution">Instituto Federal de Educação, Ciência e Tecnologia do Rio Grande do Sul, IFRS</div>
+                    <div class="period">2023 - 2023</div>
+                    <div class="hours">Carga horária: 200h</div>
+                </div>
+                
+                <div class="complementary-education-item">
+                    <div class="course-title">Auxiliar Pedagógico</div>
+                    <div class="institution">Instituto Federal de Educação, Ciência e Tecnologia do Rio Grande do Sul, IFRS</div>
+                    <div class="period">2023 - 2023</div>
+                    <div class="hours">Carga horária: 200h</div>
+                </div>
+                
+                <div class="complementary-education-item">
+                    <div class="course-title">Indicações Geográficas e Marcas Coletivas</div>
+                    <div class="institution">Instituto Nacional da Propriedade Industrial, INPI</div>
+                    <div class="period">2023 - 2023</div>
+                    <div class="hours">Carga horária: 20h</div>
+                </div>
+                
+                <div class="complementary-education-item">
+                    <div class="course-title">14º Seminário de Proteção à Privacidade e aos Dados Pessoais</div>
+                    <div class="institution">Comitê Gestor da Internet, CGI.BR</div>
+                    <div class="period">2023 - 2023</div>
+                    <div class="hours">Carga horária: 24h</div>
+                </div>
+                
+                <div class="complementary-education-item">
+                    <div class="course-title">Software: como e por que registrar</div>
+                    <div class="institution">Instituto Nacional da Propriedade Industrial, INPI</div>
+                    <div class="period">2023 - 2023</div>
+                    <div class="hours">Carga horária: 8h</div>
+                </div>
+                
+                <div class="complementary-education-item">
+                    <div class="course-title">INOVANDO NA GESTÃO DE PROJETOS</div>
+                    <div class="institution">Escola Nacional de Administração Pública, ENAP</div>
+                    <div class="period">2023 - 2023</div>
+                    <div class="hours">Carga horária: 25h</div>
+                </div>
+                
+                <div class="complementary-education-item">
+                    <div class="course-title">Tratado de Cooperação em Matéria de Patentes (Fase Nacional)</div>
+                    <div class="institution">Instituto Nacional da Propriedade Industrial, INPI</div>
+                    <div class="period">2023 - 2023</div>
+                    <div class="hours">Carga horária: 3h</div>
+                </div>
+                
+                <div class="complementary-education-item">
+                    <div class="course-title">Uso da Propriedade Intelectual em Negócios de Base Tradicional</div>
+                    <div class="institution">World Intellectual Property Organization, WIPO, Suiça</div>
+                    <div class="period">2023 - 2023</div>
+                    <div class="hours">Carga horária: 12h</div>
+                </div>
+                
+                <!-- 2022 -->
+                <div class="complementary-education-item">
+                    <div class="course-title">Governança Corporativa</div>
+                    <div class="institution">Fundação Getúlio Vargas, FGV</div>
+                    <div class="period">2022 - 2022</div>
+                    <div class="hours">Carga horária: 36h</div>
+                </div>
+                
+                <div class="complementary-education-item">
+                    <div class="course-title">Planejamento e Gestão de Projetos com o método Scrum</div>
+                    <div class="institution">Universidade Federal de São Paulo, UNIFESP</div>
+                    <div class="period">2022 - 2022</div>
+                    <div class="hours">Carga horária: 8h</div>
+                </div>
+                
+                <!-- 2021 -->
+                <div class="complementary-education-item">
+                    <div class="course-title">Extensão universitária em Temas Emergentes e Ensino Híbrido para a Educação Básica</div>
+                    <div class="institution">Universidade Federal de Santa Maria, UFSM</div>
+                    <div class="period">2021 - 2021</div>
+                    <div class="hours">Carga horária: 153h</div>
+                </div>
+                
+                <div class="complementary-education-item">
+                    <div class="course-title">Extensão universitária em Cybersecurity Essentials</div>
+                    <div class="institution">Cisco do Brasil, CISCO</div>
+                    <div class="period">2021 - 2021</div>
+                    <div class="hours">Carga horária: 30h</div>
+                </div>
+                
+                <div class="complementary-education-item">
+                    <div class="course-title">Extensão universitária em V Curso sobre Cannabis Medicinal</div>
+                    <div class="institution">Universidade Federal de São Paulo, UNIFESP</div>
+                    <div class="period">2021 - 2021</div>
+                    <div class="hours">Carga horária: 50h</div>
+                </div>
+                
+                <div class="complementary-education-item">
+                    <div class="course-title">Extensão universitária em Orientalismo e Traduções científicas</div>
+                    <div class="institution">Universidade Federal de São Paulo, UNIFESP</div>
+                    <div class="period">2021 - 2021</div>
+                    <div class="hours">Carga horária: 20h</div>
+                </div>
+                
+                <div class="complementary-education-item">
+                    <div class="course-title">Extensão universitária em EDUCAÇÃO FISCAL E CIDADANIA 9ª Edição</div>
+                    <div class="institution">Universidade Federal do Rio Grande do Sul, UFRGS</div>
+                    <div class="period">2021 - 2021</div>
+                    <div class="hours">Carga horária: 60h</div>
+                </div>
+                
+                <div class="complementary-education-item">
+                    <div class="course-title">Preparação de Gestores Públicos</div>
+                    <div class="institution">Escola Nacional de Administração Pública, ENAP</div>
+                    <div class="period">2021 - 2021</div>
+                    <div class="hours">Carga horária: 210h</div>
+                </div>
+                
+                <!-- 2020 -->
+                <div class="complementary-education-item">
+                    <div class="course-title">Extensão universitária em Contratos</div>
+                    <div class="institution">Instituto Federal de Educação, Ciência e Tecnologia do Rio Grande do Sul, IFRS</div>
+                    <div class="period">2020 - 2020</div>
+                    <div class="hours">Carga horária: 20h</div>
+                </div>
+                
+                <!-- 2019 -->
+                <div class="complementary-education-item">
+                    <div class="course-title">CURSO GERAL DE PROPRIEDADE INTELECTUAL À DISTÂNCIA</div>
+                    <div class="institution">Instituto Nacional da Propriedade Industrial, INPI</div>
+                    <div class="period">2019 - 2019</div>
+                    <div class="hours">Carga horária: 75h</div>
+                </div>
+                
+                <!-- 2017 -->
+                <div class="complementary-education-item">
+                    <div class="course-title">DL101PCT: Introdução ao Tratado de Cooperação em matéria de Patentes</div>
+                    <div class="institution">Organisation Mondiale de La Propriete Intellectuelle, OMPI</div>
+                    <div class="period">2017 - 2017</div>
+                    <div class="hours">Carga horária: 40h</div>
+                </div>
+                
+                <!-- 2012 -->
+                <div class="complementary-education-item">
+                    <div class="course-title">Curso Geral de Propriedade Intelectual</div>
+                    <div class="institution">World Intellectual Property Organization, WIPO</div>
+                    <div class="period">2012 - 2012</div>
+                    <div class="hours">Carga horária: 75h</div>
+                </div>
+                
+                <!-- 2011 -->
+                <div class="complementary-education-item">
+                    <div class="course-title">Fundamentos da Ciência Econômica</div>
+                    <div class="institution">Instituto Legislativo Brasileiro, ILB</div>
+                    <div class="period">2011 - 2011</div>
+                    <div class="hours">Carga horária: 80h</div>
+                </div>
+                
+                <!-- 2008 -->
+                <div class="complementary-education-item">
+                    <div class="course-title">Educação Fiscal</div>
+                    <div class="institution">Escola Superior de Educação Fazendária, ESAF</div>
+                    <div class="period">2008 - 2008</div>
+                    <div class="hours">Carga horária: 120h</div>
+                </div>
+            </section>
+
+            <section class="section full-width">
+                <h2><i class="fas fa-certificate"></i> Certificações e Licenças</h2>
+                <div class="certifications-grid">
+                    <div class="cert-category">
+                        <h3><i class="fas fa-brain"></i> Inteligência Artificial & Data Science</h3>
+                        <ul class="cert-list">
+                            <li>
+                                <strong>Inteligência Artificial aplicada à Visão Computacional</strong>
+                                <span class="cert-issuer">Facti</span>
+                                <span class="cert-date">Jul 2024</span>
+                            </li>
+                            <li>
+                                <strong>Imersão Dados IA: análises com inteligência artificial</strong>
+                                <span class="cert-issuer">Alura</span>
+                                <span class="cert-date">Set 2023</span>
+                            </li>
+                            <li>
+                                <strong>Machine Learning & AI Foundations: Recommendations</strong>
+                                <span class="cert-issuer">LinkedIn Learning</span>
+                                <span class="cert-date">Jan 2018</span>
+                            </li>
+                            <li>
+                                <strong>Learning Data Analytics</strong>
+                                <span class="cert-issuer">LinkedIn Learning</span>
+                                <span class="cert-date">Jan 2018</span>
+                            </li>
+                        </ul>
+                    </div>
+                    
+                    <div class="cert-category">
+                        <h3><i class="fas fa-network-wired"></i> Redes & Cybersecurity</h3>
+                        <ul class="cert-list">
+                            <li>
+                                <strong>Introduction to IoT</strong>
+                                <span class="cert-issuer">Cisco</span>
+                                <span class="cert-date">Jul 2024</span>
+                            </li>
+                            <li>
+                                <strong>CCNA: Introduction to Networks</strong>
+                                <span class="cert-issuer">Cisco</span>
+                                <span class="cert-date">Jan 2024</span>
+                            </li>
+                            <li>
+                                <strong>Cybersecurity Essentials</strong>
+                                <span class="cert-issuer">Cisco</span>
+                                <span class="cert-date">Dez 2023</span>
+                            </li>
+                            <li>
+                                <strong>BCOP - Boas Práticas Operacionais para Sistemas Autônomos</strong>
+                                <span class="cert-issuer">NIC.br</span>
+                                <span class="cert-date">Set 2023</span>
+                            </li>
+                        </ul>
+                    </div>
+                    
+                    <div class="cert-category">
+                        <h3><i class="fas fa-shield-alt"></i> Compliance & Governança</h3>
+                        <ul class="cert-list">
+                            <li>
+                                <strong>Compliance Concorrencial</strong>
+                                <span class="cert-issuer">ENAP</span>
+                                <span class="cert-date">Jun 2024</span>
+                            </li>
+                            <li>
+                                <strong>Governança Corporativa</strong>
+                                <span class="cert-issuer">FGV</span>
+                                <span class="cert-date">Abr 2022</span>
+                            </li>
+                            <li>
+                                <strong>Fundamentos da LGPD</strong>
+                                <span class="cert-issuer">ENAP</span>
+                                <span class="cert-date">Dez 2021</span>
+                            </li>
+                            <li>
+                                <strong>Governança de Dados</strong>
+                                <span class="cert-issuer">ENAP</span>
+                                <span class="cert-date">Nov 2021</span>
+                            </li>
+                        </ul>
+                    </div>
+                    
+                    <div class="cert-category">
+                        <h3><i class="fas fa-users"></i> Liderança & Gestão</h3>
+                        <ul class="cert-list">
+                            <li>
+                                <strong>Produtividade Inteligente</strong>
+                                <span class="cert-issuer">Escola Conquer</span>
+                                <span class="cert-date">Jan 2023</span>
+                            </li>
+                            <li>
+                                <strong>Planejamento e Gestão de Projetos com Scrum</strong>
+                                <span class="cert-issuer">UNIFESP</span>
+                                <span class="cert-date">Out 2022</span>
+                            </li>
+                            <li>
+                                <strong>Design Thinking</strong>
+                                <span class="cert-issuer">UNIFESP</span>
+                                <span class="cert-date">Set 2021</span>
+                            </li>
+                            <li>
+                                <strong>Six Sigma Foundations</strong>
+                                <span class="cert-issuer">LinkedIn Learning</span>
+                                <span class="cert-date">Jan 2018</span>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </section>
+
+            <section class="section full-width">
+                <h2><i class="fas fa-cogs"></i> Competências e Habilidades</h2>
+                <div class="skills-grid">
+                    <div class="skill-category">
+                        <h3>Direito</h3>
+                        <ul>
+                            <li>Direito Previdenciário</li>
+                            <li>Direito Cível</li>
+                            <li>Direito Administrativo</li>
+                            <li>Conciliação Judicial</li>
+                            <li>Recursos Administrativos</li>
+                        </ul>
+                    </div>
+                    <div class="skill-category">
+                        <h3>Governança</h3>
+                        <ul>
+                            <li>Governança Corporativa</li>
+                            <li>Compliance</li>
+                            <li>LGPD</li>
+                            <li>ESG</li>
+                            <li>Gestão de Riscos</li>
+                        </ul>
+                    </div>
+                    <div class="skill-category">
+                        <h3>Tecnologia</h3>
+                        <ul>
+                            <li>Ciência de Dados</li>
+                            <li>Machine Learning (SVM, Random Forest)</li>
+                            <li>Mineração de Dados</li>
+                            <li>Algoritmos de Classificação</li>
+                            <li>Análise de Dados Jurídicos</li>
+                        </ul>
+                    </div>
+                    <div class="skill-category">
+                        <h3>Gestão</h3>
+                        <ul>
+                            <li>Gestão de Projetos</li>
+                            <li>Políticas Públicas</li>
+                            <li>Gestão Empresarial</li>
+                            <li>Controle Documental</li>
+                            <li>Assessoria Executiva</li>
+                        </ul>
+                    </div>
+                </div>
+            </section>
+        </main>
+    </div>
+
+    <button class="print-btn" onclick="window.print()" title="Imprimir Currículo">
+        <i class="fas fa-print"></i>
+    </button>
+
+    <script>
+        // Adiciona animação suave ao rolar a página
+        document.addEventListener('DOMContentLoaded', function() {
+            const sections = document.querySelectorAll('.section');
+            
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.style.opacity = '1';
+                        entry.target.style.transform = 'translateY(0)';
+                    }
+                });
+            }, {
+                threshold: 0.1
+            });
+            
+            sections.forEach(section => {
+                section.style.opacity = '0';
+                section.style.transform = 'translateY(20px)';
+                section.style.transition = 'opacity 0.6s ease, transform 0.6s ease';
+                observer.observe(section);
+            });
+        });
+    </script>
+</body>
+</html>
