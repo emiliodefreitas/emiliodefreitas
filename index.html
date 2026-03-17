@@ -1,323 +1,130 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
-  <meta charset="UTF-8" />
-  <title>Currículo - Emilio de Freitas - OAB 105866</title>
-  <style>
-    html, body {
-      height: 100%;
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
-    }
-    body {
-      min-height: 100vh;
-      background: #040d21;
-      overflow-x: hidden;
-      position: relative;
-    }
-    #particles-js {
-      position: fixed;
-      top: 0;
-      left: 0;
-      width: 100%;
-      height: 100%;
-      z-index: -1;
-    }
-    .container {
-      position: relative;
-      z-index: 1;
-    }
-  </style>
-</head>
-<body>
-  <div id="particles-js"></div>
-  
-  <!-- Restante do seu conteúdo HTML existente -->
-  <div class="container">
-    <!-- Todo o conteúdo do seu currículo aqui -->
-  </div>
-
-  <!-- Script das partículas -->
-  <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
-  <script>
-    particlesJS("particles-js", {
-      "particles": {
-        "number": {
-          "value": 80,
-          "density": {
-            "enable": true,
-            "value_area": 800
-          }
-        },
-        "color": {
-          "value": "#ffffff"
-        },
-        "shape": {
-          "type": "circle",
-          "stroke": {
-            "width": 0,
-            "color": "#000000"
-          },
-          "polygon": {
-            "nb_sides": 5
-          }
-        },
-        "opacity": {
-          "value": 0.5,
-          "random": false,
-          "anim": {
-            "enable": false,
-            "speed": 1,
-            "opacity_min": 0.1,
-            "sync": false
-          }
-        },
-        "size": {
-          "value": 3,
-          "random": true,
-          "anim": {
-            "enable": false,
-            "speed": 40,
-            "size_min": 0.1,
-            "sync": false
-          }
-        },
-        "line_linked": {
-          "enable": true,
-          "distance": 150,
-          "color": "#ffffff",
-          "opacity": 0.4,
-          "width": 1
-        },
-        "move": {
-          "enable": true,
-          "speed": 2,
-          "direction": "none",
-          "random": false,
-          "straight": false,
-          "out_mode": "out",
-          "bounce": false,
-          "attract": {
-            "enable": false,
-            "rotateX": 600,
-            "rotateY": 1200
-          }
-        }
-      },
-      "interactivity": {
-        "detect_on": "canvas",
-        "events": {
-          "onhover": {
-            "enable": true,
-            "mode": "grab"
-          },
-          "onclick": {
-            "enable": true,
-            "mode": "push"
-          },
-          "resize": true
-        },
-        "modes": {
-          "grab": {
-            "distance": 140,
-            "line_linked": {
-              "opacity": 1
-            }
-          },
-          "bubble": {
-            "distance": 400,
-            "size": 40,
-            "duration": 2,
-            "opacity": 8,
-            "speed": 3
-          },
-          "repulse": {
-            "distance": 200,
-            "duration": 0.4
-          },
-          "push": {
-            "particles_nb": 4
-          },
-          "remove": {
-            "particles_nb": 2
-          }
-        }
-      },
-      "retina_detect": true
-    });
-  </script>
-
-  <!-- Restante dos seus scripts existentes -->
-</body>
-</html>
-
-<!-- HTML do Letreiro Neon -->
-<div id="marquee-container">
-  <div id="marquee-text">
-    <span class="text-oab">OAB/RS 105866</span>
-    <span class="text-separator"> - </span>
-    <span class="text-portuguese">Seja Bem-vindo(a)!</span>
-    <span class="text-separator"> - </span>
-    <span class="text-chinese">欢迎！</span>
-    <span class="text-separator"> - </span>
-    <span class="text-persian">خوش آمدید!</span>
-    <span class="text-separator"> - </span>
-    <span class="text-english">Welcome!</span>
-    <span class="text-separator"> - </span>
-    <span class="text-spanish">¡Bienvenido(a)!</span>
-    <span class="text-separator"> - </span>
-    <span class="text-oab">OAB/RS 105866</span>
-    <span class="text-separator"> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>
-  </div>
-</div>
-
-<style>
-/* CSS do Letreiro Neon */
-#marquee-container {
-  width: 100%;
-  height: 50px;
-  background: linear-gradient(45deg, #0a0a0a, #1a1a1a);
-  border: 2px solid #333;
-  border-radius: 8px;
-  overflow: hidden;
-  position: relative;
-  box-shadow: 
-    0 0 20px rgba(0, 255, 255, 0.3),
-    inset 0 0 20px rgba(0, 0, 0, 0.5);
-  margin-bottom: 20px;
-}
-
-#marquee-text {
-  position: absolute;
-  white-space: nowrap;
-  font-size: 22px;
-  font-weight: bold;
-  line-height: 50px;
-  animation: scroll-left 25s linear infinite;
-  padding-left: 100%;
-  font-family: 'Arial', sans-serif;
-}
-
-/* Animação de rolagem */
-@keyframes scroll-left {
-  0% {
-    transform: translateX(0%);
-  }
-  100% {
-    transform: translateX(-100%);
-  }
-}
-
-/* Efeito neon piscante */
-@keyframes neon-flicker {
-  0%, 100% { opacity: 1; }
-  50% { opacity: 0.8; }
-}
-
-/* Cores com efeito neon */
-.text-oab { 
-  color: #FFD700;
-  text-shadow: 
-    0 0 5px #FFD700,
-    0 0 10px #FFD700,
-    0 0 15px #FFD700,
-    0 0 20px #FFD700;
-  animation: neon-flicker 2s infinite alternate;
-}
-
-.text-portuguese { 
-  color: #00FF7F;
-  text-shadow: 
-    0 0 5px #00FF7F,
-    0 0 10px #00FF7F,
-    0 0 15px #00FF7F,
-    0 0 20px #00FF7F;
-  animation: neon-flicker 2.5s infinite alternate;
-}
-
-.text-chinese { 
-  color: #FF6B6B;
-  text-shadow: 
-    0 0 5px #FF6B6B,
-    0 0 10px #FF6B6B,
-    0 0 15px #FF6B6B,
-    0 0 20px #FF6B6B;
-  animation: neon-flicker 3s infinite alternate;
-}
-
-.text-persian { 
-  color: #4ECDC4;
-  text-shadow: 
-    0 0 5px #4ECDC4,
-    0 0 10px #4ECDC4,
-    0 0 15px #4ECDC4,
-    0 0 20px #4ECDC4;
-  animation: neon-flicker 2.2s infinite alternate;
-}
-
-.text-english { 
-  color: #45B7D1;
-  text-shadow: 
-    0 0 5px #45B7D1,
-    0 0 10px #45B7D1,
-    0 0 15px #45B7D1,
-    0 0 20px #45B7D1;
-  animation: neon-flicker 2.8s infinite alternate;
-}
-
-.text-spanish { 
-  color: #FFA07A;
-  text-shadow: 
-    0 0 5px #FFA07A,
-    0 0 10px #FFA07A,
-    0 0 15px #FFA07A,
-    0 0 20px #FFA07A;
-  animation: neon-flicker 2.3s infinite alternate;
-}
-
-.text-separator { 
-  color: #FFFFFF;
-  text-shadow: 
-    0 0 5px #FFFFFF,
-    0 0 10px #FFFFFF,
-    0 0 15px #FFFFFF;
-  animation: neon-flicker 3.5s infinite alternate;
-}
-
-/* Responsividade */
-@media (max-width: 600px) {
-  #marquee-container {
-    height: 40px;
-  }
-  
-  #marquee-text {
-    font-size: 18px;
-    line-height: 40px;
-  }
-}
-
-@media (max-width: 480px) {
-  #marquee-container {
-    height: 35px;
-  }
-  
-  #marquee-text {
-    font-size: 16px;
-    line-height: 35px;
-  }
-}
-</style>
-
-
-
-<!DOCTYPE html>
-<html lang="pt-BR">
-<head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Currículo Online - Advogado OAB/RS 105866</title>
+    <title>Currículo - Emilio de Freitas - OAB 105866</title>
+    
+    <!-- Font Awesome -->
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    
+    <!-- CSS do Particles -->
+    <style>
+        html, body {
+            height: 100%;
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body {
+            min-height: 100vh;
+            background: #040d21;
+            overflow-x: hidden;
+            position: relative;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+        #particles-js {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: -1;
+        }
+    </style>
+    
+    <!-- CSS do Letreiro Neon -->
+    <style>
+        #marquee-container {
+            width: 100%;
+            height: 50px;
+            background: linear-gradient(45deg, #0a0a0a, #1a1a1a);
+            border: 2px solid #333;
+            border-radius: 8px;
+            overflow: hidden;
+            position: relative;
+            box-shadow: 
+                0 0 20px rgba(0, 255, 255, 0.3),
+                inset 0 0 20px rgba(0, 0, 0, 0.5);
+            margin-bottom: 20px;
+            z-index: 2;
+        }
+
+        #marquee-text {
+            position: absolute;
+            white-space: nowrap;
+            font-size: 22px;
+            font-weight: bold;
+            line-height: 50px;
+            animation: scroll-left 25s linear infinite;
+            padding-left: 100%;
+            font-family: 'Arial', sans-serif;
+        }
+
+        @keyframes scroll-left {
+            0% { transform: translateX(0%); }
+            100% { transform: translateX(-100%); }
+        }
+
+        @keyframes neon-flicker {
+            0%, 100% { opacity: 1; }
+            50% { opacity: 0.8; }
+        }
+
+        .text-oab { 
+            color: #FFD700;
+            text-shadow: 0 0 5px #FFD700, 0 0 10px #FFD700, 0 0 15px #FFD700, 0 0 20px #FFD700;
+            animation: neon-flicker 2s infinite alternate;
+        }
+
+        .text-portuguese { 
+            color: #00FF7F;
+            text-shadow: 0 0 5px #00FF7F, 0 0 10px #00FF7F, 0 0 15px #00FF7F, 0 0 20px #00FF7F;
+            animation: neon-flicker 2.5s infinite alternate;
+        }
+
+        .text-chinese { 
+            color: #FF6B6B;
+            text-shadow: 0 0 5px #FF6B6B, 0 0 10px #FF6B6B, 0 0 15px #FF6B6B, 0 0 20px #FF6B6B;
+            animation: neon-flicker 3s infinite alternate;
+        }
+
+        .text-persian { 
+            color: #4ECDC4;
+            text-shadow: 0 0 5px #4ECDC4, 0 0 10px #4ECDC4, 0 0 15px #4ECDC4, 0 0 20px #4ECDC4;
+            animation: neon-flicker 2.2s infinite alternate;
+        }
+
+        .text-english { 
+            color: #45B7D1;
+            text-shadow: 0 0 5px #45B7D1, 0 0 10px #45B7D1, 0 0 15px #45B7D1, 0 0 20px #45B7D1;
+            animation: neon-flicker 2.8s infinite alternate;
+        }
+
+        .text-spanish { 
+            color: #FFA07A;
+            text-shadow: 0 0 5px #FFA07A, 0 0 10px #FFA07A, 0 0 15px #FFA07A, 0 0 20px #FFA07A;
+            animation: neon-flicker 2.3s infinite alternate;
+        }
+
+        .text-separator { 
+            color: #FFFFFF;
+            text-shadow: 0 0 5px #FFFFFF, 0 0 10px #FFFFFF, 0 0 15px #FFFFFF;
+            animation: neon-flicker 3.5s infinite alternate;
+        }
+
+        @media (max-width: 600px) {
+            #marquee-container { height: 40px; }
+            #marquee-text { font-size: 18px; line-height: 40px; }
+        }
+
+        @media (max-width: 480px) {
+            #marquee-container { height: 35px; }
+            #marquee-text { font-size: 16px; line-height: 35px; }
+        }
+    </style>
+    
+    <!-- CSS do Currículo Principal -->
     <style>
         * {
             margin: 0;
@@ -325,18 +132,12 @@
             box-sizing: border-box;
         }
 
-        body {
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            line-height: 1.6;
-            color: #333;
-            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-            min-height: 100vh;
-        }
-
         .container {
             max-width: 1200px;
             margin: 0 auto;
             padding: 20px;
+            position: relative;
+            z-index: 2;
         }
 
         .header {
@@ -360,6 +161,14 @@
             margin: 0 auto 20px;
             font-size: 60px;
             color: white;
+            overflow: hidden;
+        }
+
+        .profile-img img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            border-radius: 50%;
         }
 
         .name {
@@ -392,6 +201,36 @@
 
         .contact-item i {
             color: #667eea;
+        }
+
+        .blinking-button {
+            font-family: 'Century Gothic', sans-serif;
+            background-color: #25D366;
+            color: white;
+            border: none;
+            padding: 15px 30px;
+            text-align: center;
+            text-decoration: none;
+            display: inline-block;
+            font-size: 20px;
+            margin: 10px;
+            cursor: pointer;
+            border-radius: 50px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            animation: blink 1s infinite;
+            transition: transform 0.3s;
+        }
+        
+        .blinking-button:hover {
+            transform: scale(1.05);
+            animation: none;
+            background-color: #128C7E;
+        }
+        
+        @keyframes blink {
+            0% { opacity: 1; }
+            50% { opacity: 0.7; }
+            100% { opacity: 1; }
         }
 
         .main-content {
@@ -638,6 +477,43 @@
             margin-bottom: 5px;
         }
 
+        .print-btn {
+            position: fixed;
+            bottom: 30px;
+            right: 30px;
+            background: #667eea;
+            color: white;
+            border: none;
+            padding: 15px;
+            border-radius: 50%;
+            font-size: 20px;
+            cursor: pointer;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+            transition: all 0.3s ease;
+            z-index: 1000;
+        }
+
+        .print-btn:hover {
+            background: #5a6fd8;
+            transform: scale(1.1);
+        }
+
+        .counter-container {
+            position: relative;
+            z-index: 2;
+            margin: 20px auto;
+            text-align: center;
+            background: rgba(255, 255, 255, 0.1);
+            padding: 10px;
+            border-radius: 10px;
+            max-width: 300px;
+        }
+        
+        .counter-container a {
+            color: white;
+            text-decoration: none;
+        }
+
         @media (max-width: 768px) {
             .main-content {
                 grid-template-columns: 1fr;
@@ -662,26 +538,6 @@
             }
         }
 
-        .print-btn {
-            position: fixed;
-            bottom: 30px;
-            right: 30px;
-            background: #667eea;
-            color: white;
-            border: none;
-            padding: 15px;
-            border-radius: 50%;
-            font-size: 20px;
-            cursor: pointer;
-            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
-            transition: all 0.3s ease;
-        }
-
-        .print-btn:hover {
-            background: #5a6fd8;
-            transform: scale(1.1);
-        }
-
         @media print {
             body {
                 background: white;
@@ -695,14 +551,46 @@
             .print-btn {
                 display: none;
             }
+            
+            #particles-js {
+                display: none;
+            }
+            
+            #marquee-container {
+                display: none;
+            }
         }
     </style>
 </head>
 <body>
+    <!-- Particles.js Container -->
+    <div id="particles-js"></div>
+    
+    <!-- Letreiro Neon -->
+    <div id="marquee-container">
+        <div id="marquee-text">
+            <span class="text-oab">OAB/RS 105866</span>
+            <span class="text-separator"> - </span>
+            <span class="text-portuguese">Seja Bem-vindo(a)!</span>
+            <span class="text-separator"> - </span>
+            <span class="text-chinese">欢迎！</span>
+            <span class="text-separator"> - </span>
+            <span class="text-persian">خوش آمدید!</span>
+            <span class="text-separator"> - </span>
+            <span class="text-english">Welcome!</span>
+            <span class="text-separator"> - </span>
+            <span class="text-spanish">¡Bienvenido(a)!</span>
+            <span class="text-separator"> - </span>
+            <span class="text-oab">OAB/RS 105866</span>
+            <span class="text-separator"> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>
+        </div>
+    </div>
+
+    <!-- Conteúdo Principal -->
     <div class="container">
         <header class="header">
             <div class="profile-img">
-                <img src="perfil.jpg" alt="Foto de Emílio de Freitas" style="width: 100%; height: 100%; object-fit: cover; border-radius: 50%;">
+                <img src="perfil.jpg" alt="Foto de Emílio de Freitas">
             </div>
             <h1 class="name">Emílio de Freitas</h1>
             <p class="title">Advogado | Ciência de Dados (UFSM) | Licenciatura em Computação e Robótica (UFRGS)</p>
@@ -724,57 +612,14 @@
                     <span>OAB/RS 105.866</span>
                 </div>
             </div>
-<!DOCTYPE html>
-<html lang="pt-br">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Botão Piscante</title>
-    <style>
-        @import url('https://fonts.googleapis.com/css2?family=Century+Gothic&display=swap');
-        
-        .blinking-button {
-            font-family: 'Century Gothic', sans-serif;
-            background-color: #25D366; /* Cor verde do WhatsApp */
-            color: white;
-            border: none;
-            padding: 15px 30px;
-            text-align: center;
-            text-decoration: none;
-            display: inline-block;
-            font-size: 20px;
-            margin: 10px;
-            cursor: pointer;
-            border-radius: 50px;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-            animation: blink 1s infinite;
-            transition: transform 0.3s;
-        }
-        
-        .blinking-button:hover {
-            transform: scale(1.05);
-            animation: none;
-            background-color: #128C7E; /* Cor mais escura ao passar o mouse */
-        }
-        
-        @keyframes blink {
-            0% { opacity: 1; }
-            50% { opacity: 0.7; }
-            100% { opacity: 1; }
-        }
-    </style>
-</head>
-<body>
-    <a href="https://wa.me/5551981574837" class="blinking-button">Mensagem</a>
-</body>
-</html>
+            <a href="https://wa.me/5551981574837" class="blinking-button">Mensagem</a>
         </header>
        
- <main class="main-content">
+        <main class="main-content">
             <section class="section">
                 <h2><i class="fas fa-briefcase"></i> Experiência Profissional</h2>
                 
-                       <div class="experience-item">
+                <div class="experience-item">
                     <div class="job-title">Advogado Contencioso Negocial</div>
                     <div class="company">Hoepers, Campos & Noroefé Advogados Associados</div>
                     <div class="period">Janeiro de 2026 - Presente</div>
@@ -785,24 +630,24 @@
                         <li>Utilização de modelagem preditiva para análise de fraudes e relatórios, análises grafoscópicas e geolocalização.</li>
                     </ul>
                 </div>
-				
-					<div class="experience-item">
+                
+                <div class="experience-item">
                     <div class="job-title">Advogado Associado</div>
                     <div class="company">Pereira e Gionédis Advogados</div>
                     <div class="period">julho de 2025 - Presente</div>
                     <div class="location">Porto Alegre, Rio Grande do Sul, Brasil</div>
                     <ul class="responsibilities">
-            <li>Atuação estratégica em medidas para a recuperação de ativos do contencioso e negocial.</li>
-			<li>Utilização de técnicas de OSINT e cruzamento de dados.</li>
-			<li>Desenvolvimento de pareceres jurídicos e relatórios investigativos com uso de modelos de linguagem (LLMs) e análise automatizada de documentos.</li>
-			<li>Aplicação de inteligência artificial e mineração de dados para detecção de padrões de fraude e mapeamento de vulnerabilidades. Python (Pandas, Scikit-learn), SQL e linguagem R.</li>
-                     </ul>
+                        <li>Atuação estratégica em medidas para a recuperação de ativos do contencioso e negocial.</li>
+                        <li>Utilização de técnicas de OSINT e cruzamento de dados.</li>
+                        <li>Desenvolvimento de pareceres jurídicos e relatórios investigativos com uso de modelos de linguagem (LLMs) e análise automatizada de documentos.</li>
+                        <li>Aplicação de inteligência artificial e mineração de dados para detecção de padrões de fraude e mapeamento de vulnerabilidades. Python (Pandas, Scikit-learn), SQL e linguagem R.</li>
+                    </ul>
                 </div>
 
-		<div class="experience-item">
+                <div class="experience-item">
                     <div class="job-title">Advogado</div>
                     <div class="company">Justiça Federal do Rio Grande do Sul</div>
-                    <div class="period">junho de 2024 - Presente (1 ano 2 meses)</div>
+                    <div class="period">junho de 2024 - Presente</div>
                     <div class="location">Porto Alegre, Rio Grande do Sul, Brasil</div>
                     <ul class="responsibilities">
                         <li>Prestar serviço como advogado voluntário (ad hoc) na área de Direito Previdenciário e Cível</li>
@@ -814,7 +659,7 @@
                 <div class="experience-item">
                     <div class="job-title">Assessor Executivo de Governança Corporativa</div>
                     <div class="company">Brasil TecPar</div>
-                    <div class="period">novembro de 2021 - junho de 2024 (2 anos 8 meses)</div>
+                    <div class="period">novembro de 2021 - junho de 2024</div>
                     <div class="location">Porto Alegre, Rio Grande do Sul, Brasil</div>
                     <ul class="responsibilities">
                         <li>Gestão de demandas administrativas da diretoria, incluindo suporte a viagens corporativas</li>
@@ -828,7 +673,7 @@
                 <div class="experience-item">
                     <div class="job-title">Advogado Sênior</div>
                     <div class="company">Tribunal Regional Federal da 4ª Região</div>
-                    <div class="period">abril de 2017 - novembro de 2021 (4 anos 8 meses)</div>
+                    <div class="period">abril de 2017 - novembro de 2021</div>
                     <div class="location">Porto Alegre e Região, Brasil</div>
                     <ul class="responsibilities">
                         <li>Atuar como advogado na AJV/CNJ</li>
@@ -841,7 +686,7 @@
                 <div class="experience-item">
                     <div class="job-title">Conciliador Judicial</div>
                     <div class="company">Tribunal de Justiça do RS</div>
-                    <div class="period">janeiro de 2017 - novembro de 2021 (4 anos 11 meses)</div>
+                    <div class="period">janeiro de 2017 - novembro de 2021</div>
                     <div class="location">Porto Alegre e Região, Brasil</div>
                     <ul class="responsibilities">
                         <li>Atuar como Conciliador Cível em audiências do Fórum Central de Porto Alegre e Fórum de Canoas</li>
@@ -850,69 +695,57 @@
                     </ul>
                 </div>
 
-<div class="experience-item">
-    <div class="job-title">Conciliador Judicial</div>
-    <div class="company">Tribunal de Justiça do RS</div>
-    <div class="period">janeiro de 2017 - novembro de 2021 (4 anos 11 meses)</div>
-    <div class="location">Porto Alegre e Região, Brasil</div>
-    <ul class="responsibilities">
-        <li>Atuar como Conciliador Cível em audiências do Fórum Central de Porto Alegre e Fórum de Canoas</li>
-        <li>Prestar atendimento pré-processual</li>
-        <li>Buscar a solução dos conflitos através do acordo entre as partes</li>
-    </ul>
-</div>
+                <div class="experience-item">
+                    <div class="job-title">Analista Jurídico II - Representante de Relacionamento</div>
+                    <div class="company">Oi S.A</div>
+                    <div class="period">abril de 2014 - maio de 2016</div>
+                    <div class="location">Porto Alegre e Região</div>
+                    <ul class="responsibilities">
+                        <li>Assessorar o Conselho de Usuários da Oi S.A</li>
+                        <li>Realizar visitas nos Procons Estaduais (RS), Anatel, MP e Câmara dos Vereadores</li>
+                        <li>Controle de agenda do Conselho de Usuários, agendamento de reuniões, coffee break e prestação de contas</li>
+                        <li>Responsável pela elaboração de apresentações e atas da reunião de Conselho de Usuários</li>
+                        <li>Atuar como facilitador entre a Diretoria Jurídica e a Diretoria Institucional</li>
+                    </ul>
+                </div>
 
-<div class="experience-item">
-    <div class="job-title">Analista Jurídico II 👨‍💼 Representante de Relacionamento</div>
-    <div class="company">Oi S.A · Tempo integral</div>
-    <div class="period">abril de 2014 - maio de 2016 (2 anos 2 meses)</div>
-    <div class="location">Porto Alegre e Região</div>
-    <ul class="responsibilities">
-        <li>Assessorar o Conselho de Usuários da Oi S.A</li>
-        <li>Realizar visitas nos Procons Estaduais (RS), Anatel, MP e Câmara dos Vereadores</li>
-        <li>Controle de agenda do Conselho de Usuários, agendamento de reuniões, coffee break e prestação de contas</li>
-        <li>Responsável pela elaboração de apresentações e atas da reunião de Conselho de Usuários</li>
-        <li>Atuar como facilitador entre a Diretoria Jurídica e a Diretoria Institucional</li>
-    </ul>
-</div>
+                <div class="experience-item">
+                    <div class="job-title">Oficial do Exército</div>
+                    <div class="company">Exército Brasileiro</div>
+                    <div class="period">março de 2001 - março de 2009</div>
+                    <div class="location">Santa Maria, Rio Grande do Sul, Brasil</div>
+                    <ul class="responsibilities">
+                        <li>Oficial de Informática</li>
+                        <li>Responsável pela gestão do Programa de Excelência Gerencial (PEG-EB)</li>
+                        <li>Gerenciar a Seção de Planejamento de Instruções (3ª Seção)</li>
+                        <li>Membro da Comissão de Fiscalização de Contratos e Licitações</li>
+                    </ul>
+                </div>
 
-<div class="experience-item">
-    <div class="job-title">Oficial do Exército 🎖️</div>
-    <div class="company">Exército Brasileiro · Tempo integral</div>
-    <div class="period">março de 2001 - março de 2009 (8 anos 1 mês)</div>
-    <div class="location">Santa Maria, Rio Grande do Sul, Brasil</div>
-    <ul class="responsibilities">
-        <li>Oficial de Informática</li>
-        <li>Responsável pela gestão do Programa de Excelência Gerencial (PEG-EB)</li>
-        <li>Gerenciar a Seção de Planejamento de Instruções (3ª Seção)</li>
-        <li>Membro da Comissão de Fiscalização de Contratos e Licitações</li>
-    </ul>
-</div>
+                <div class="experience-item">
+                    <div class="job-title">Trainee Jurídico</div>
+                    <div class="company">Andrade Maia Advogados</div>
+                    <div class="period">outubro de 2013 - abril de 2014</div>
+                    <div class="location">Porto Alegre e Região</div>
+                    <ul class="responsibilities">
+                        <li>Acompanhamento de demandas cíveis da carteira de clientes (Cível Estratégico)</li>
+                        <li>Auxiliar na elaboração de peças jurídicas e recursos administrativos (HMV, Claro, Braskem)</li>
+                        <li>Intermediar o contato entre escritório e clientes</li>
+                        <li>Participar dos processos de recuperação de créditos da carteira de execução cível</li>
+                        <li>Monitorar ações de compliance</li>
+                    </ul>
+                </div>
 
-<div class="experience-item">
-    <div class="job-title">Trainee Jurídico 👨‍⚖️</div>
-    <div class="company">Andrade Maia Advogados · Tempo integral</div>
-    <div class="period">outubro de 2013 - abril de 2014 (7 meses)</div>
-    <div class="location">Porto Alegre e Região</div>
-    <ul class="responsibilities">
-        <li>Acompanhamento de demandas cíveis da carteira de clientes (Cível Estratégico)</li>
-        <li>Auxiliar na elaboração de peças jurídicas e recursos administrativos (HMV, Claro, Braskem)</li>
-        <li>Intermediar o contato entre escritório e clientes</li>
-        <li>Participar dos processos de recuperação de créditos da carteira de execução cível</li>
-        <li>Monitorar ações de compliance</li>
-    </ul>
-</div>
-
-<div class="experience-item">
-    <div class="job-title">Estágios</div>
-    <ul class="responsibilities">
-        <li>Tribunal de Contas do Estado do Rio Grande do Sul (TCE-RS) - 2012 - 2013, Porto Alegre e Região</li>
-        <li>Instituto Sollo Advogados Associados - 2011 - 2012, Porto Alegre e Região</li>
-        <li>Mincarone Advogados - janeiro de 2011 - novembro de 2011, Porto Alegre, Rio Grande do Sul, Brasil</li>
-        <li>Defensoria Pública do Estado do Rio Grande do Sul - 2009 - 2011, Porto Alegre, Rio Grande do Sul, Brasil</li>
-        <li>Secretaria de Obras Públicas - 2008 - 2009, Porto Alegre, Rio Grande do Sul, Brasil</li>
-    </ul>
-</div>
+                <div class="experience-item">
+                    <div class="job-title">Estágios</div>
+                    <ul class="responsibilities">
+                        <li>Tribunal de Contas do Estado do Rio Grande do Sul (TCE-RS) - 2012 - 2013</li>
+                        <li>Instituto Sollo Advogados Associados - 2011 - 2012</li>
+                        <li>Mincarone Advogados - janeiro de 2011 - novembro de 2011</li>
+                        <li>Defensoria Pública do Estado do Rio Grande do Sul - 2009 - 2011</li>
+                        <li>Secretaria de Obras Públicas - 2008 - 2009</li>
+                    </ul>
+                </div>
             </section>
 
             <section class="section">
@@ -924,7 +757,7 @@
                     <div class="period">janeiro de 2024 - em andamento</div>
                 </div>
 
-				  <div class="education-item">
+                <div class="education-item">
                     <div class="degree">Empreendedorismo e Inovação em Negócios</div>
                     <div class="institution">Universidade Federal do Rio Grande</div>
                     <div class="period">março de 2025 - em andamento</div>
@@ -954,376 +787,360 @@
                     <div class="period">2007 - 2012</div>
                 </div>
 
-
                 <h2><i class="fas fa-graduation-cap"></i> Trabalhos técnicos</h2>
 
- <div class="education-item">
-                    <li>Perícia técnica no processo nº. 0011.18.0087330-2. 2019.</li>
-                    <li>Perícia técnica no processo nº. 0011.07.0245886-8. 2018.</li>
-                    <li>Collecting Annual Visitation Numbers for the World Heritage Sites. 2012. ONU</li>
- 		    <li>State of the World's Volunteerism Report. 2012. ONU</li>
+                <div class="education-item">
+                    <ul class="responsibilities">
+                        <li>Perícia técnica no processo nº. 0011.18.0087330-2. 2019.</li>
+                        <li>Perícia técnica no processo nº. 0011.07.0245886-8. 2018.</li>
+                        <li>Collecting Annual Visitation Numbers for the World Heritage Sites. 2012. ONU</li>
+                        <li>State of the World's Volunteerism Report. 2012. ONU</li>
+                    </ul>
+                </div>
+            </section>
+
+            <section class="section full-width">
+                <h2><i class="fas fa-certificate"></i> Formação Complementar</h2>
+
+                <!-- 2026 -->
+                <div class="complementary-education-item">
+                    <div class="course-title">Curso Introdução à Governança da Internet: aspectos técnicos e sociais</div>
+                    <div class="institution">Escola de Governança da Internet no Brasil (EGI), NicBR</div>
+                    <div class="period">2026</div>
+                    <div class="hours">Carga horária: 35h</div>
                 </div>
 
-	   </section>
+                <div class="complementary-education-item">
+                    <div class="course-title">Curso de Aperfeiçoamento em Educação e Tecnologia e Gestão Escolar</div>
+                    <div class="institution">Secretaria de Educação Básica no Ambiente Virtual de Aprendizagem do Ministério da Educação (AVAMEC/MEC)</div>
+                    <div class="period">2026</div>
+                    <div class="hours">Carga horária: 260h</div>
+                </div>
 
-   <section class="section full-width">
-      <h2><i class="fas fa-certificate"></i> Formação Complementar</h2>
+                <div class="complementary-education-item">
+                    <div class="course-title">Programa ONE Oracle Next Generation</div>
+                    <div class="institution">ALURA</div>
+                    <div class="period">2026</div>
+                    <div class="hours">Carga horária: 348h</div>
+                </div>
 
-	<!-- 2026 -->
-	<div class="complementary-education-item">
-    <div class="course-title">Curso Introdução à Governança da Internet: aspectos técnicos e sociais</div>
-    <div class="institution">Escola de Governança da Internet no Brasil (EGI), NicBR</div>
-    <div class="period">2026</div>
-    <div class="hours">Carga horária: 35h</div>
-</div>
+                <div class="complementary-education-item">
+                    <div class="course-title">Curso de Integridade e Compliance</div>
+                    <div class="institution">Fundação Escola de Governo do Estado de Santa Catarina - ENA</div>
+                    <div class="period">2026</div>
+                    <div class="hours">Carga horária: 40h</div>
+                </div>
 
-<div class="complementary-education-item">
-    <div class="course-title">Curso de Aperfeiçoamento em Educação e Tecnologia e Gestão Escolar</div>
-    <div class="institution">Secretaria de Educação Básica no Ambiente Virtual de Aprendizagem do Ministério da Educação (AVAMEC/MEC)</div>
-    <div class="period">2026</div>
-    <div class="hours">Carga horária: 260h</div>
-</div>
-
-<div class="complementary-education-item">
-    <div class="course-title">Programa ONE Oracle Next Generation</div>
-    <div class="institution">ALURA</div>
-    <div class="period">2026</div>
-    <div class="hours">Carga horária: 348h</div>
-</div>
-
-	   
-<div class="complementary-education-item">
-    <div class="course-title">Curso de Integridade e Compliance</div>
-    <div class="institution">Fundação Escola de Governo do Estado de Santa Catarina - ENA</div>
-    <div class="period">2026</div>
-    <div class="hours">Carga horária: 40h</div>
-</div>
-
-
-<div class="complementary-education-item">
-    <div class="course-title">Extensão universitária em Introdução às Singularidades via Teoria das Catástrofes</div>
-    <div class="institution">Universidade de São Paulo, USP</div>
-    <div class="period">2025 - 2025</div>
-    <div class="hours">Carga horária: 20h</div>
-</div>
-
-<div class="complementary-education-item">
-    <div class="course-title">Extensão universitária em Guia de Inteligência Artificial para Iniciantes</div>
-    <div class="institution">Instituto Federal de Educação, Ciência e Tecnologia do Sul de Minas Gerais, IFSULDEMINAS</div>
-    <div class="period">2025 - 2025</div>
-    <div class="hours">Carga horária: 20h</div>
-</div>
-	   
-    <!-- 2025 -->	   
-	<div class="complementary-education-item">
-        <div class="course-title">Extensão universitária em Introdução às Singularidades via Teoria das Catástrofes</div>
-        <div class="institution">Universidade de São Paulo, USP</div>
-        <div class="period">2025 - 2025</div>
-        <div class="hours">Carga horária: 20h</div>
-    </div>
-    
-    <div class="complementary-education-item">
-        <div class="course-title">Extensão universitária em Guia de Inteligência Artificial para Iniciantes</div>
-        <div class="institution">Instituto Federal de Educação, Ciência e Tecnologia do Sul de Minas Gerais, IFSULDEMINAS</div>
-        <div class="period">2025 - 2025</div>
-        <div class="hours">Carga horária: 20h</div>
-    </div>
-    
-    <div class="complementary-education-item">
-        <div class="course-title">Extensão universitária em Introdução às teorias do fascismo alemão na Escola de Frankfurt</div>
-        <div class="institution">Universidade de São Paulo, USP</div>
-        <div class="period">2025 - 2025</div>
-        <div class="hours">Carga horária: 10h</div>
-    </div>
-    
-    <div class="complementary-education-item">
-        <div class="course-title">Curso Inteligência Artificial aplicada à Visão Computacional</div>
-        <div class="institution">Qualifact</div>
-        <div class="period">2024</div>
-        <div class="hours">Carga horária: 240h</div>
-    </div>
-
-    <div class="complementary-education-item">
-        <div class="course-title">Blockchain-Contratos Inteligentes</div>
-        <div class="institution">Qualifact</div>
-        <div class="period">2025 - 2025</div>
-        <div class="hours">Carga horária: 30h</div>
-    </div>
-
-    <div class="complementary-education-item">
-        <div class="course-title">Explorando aplicações dinâmicas e escaláveis na Nuvem: BaaS para apps Android e iOS</div>
-        <div class="institution">Qualifact</div>
-        <div class="period">2025 - 2025</div>
-        <div class="hours">Carga horária: 30h</div>
-    </div>
-
-    <div class="complementary-education-item">
-        <div class="course-title">Extensão universitária em Acessibilidade na Educação Profissional e Tecnológica e na Educação Superior</div>
-        <div class="institution">Universidade Federal de Santa Maria, UFSM</div>
-        <div class="period">2025 - 2025</div>
-        <div class="hours">Carga horária: 80h</div>
-    </div>
-
-                    <div class="complementary-education-item">
-                    <div class="course-title">Extensão universitária em História e arqueologia da colonização grega na Croácia</div>
+                <!-- 2025 -->
+                <div class="complementary-education-item">
+                    <div class="course-title">Extensão universitária em Introdução às Singularidades via Teoria das Catástrofes</div>
                     <div class="institution">Universidade de São Paulo, USP</div>
-                    <div class="period">2025 - 2025</div>
+                    <div class="period">2025</div>
+                    <div class="hours">Carga horária: 20h</div>
+                </div>
+
+                <div class="complementary-education-item">
+                    <div class="course-title">Extensão universitária em Guia de Inteligência Artificial para Iniciantes</div>
+                    <div class="institution">Instituto Federal de Educação, Ciência e Tecnologia do Sul de Minas Gerais, IFSULDEMINAS</div>
+                    <div class="period">2025</div>
+                    <div class="hours">Carga horária: 20h</div>
+                </div>
+
+                <div class="complementary-education-item">
+                    <div class="course-title">Extensão universitária em Introdução às teorias do fascismo alemão na Escola de Frankfurt</div>
+                    <div class="institution">Universidade de São Paulo, USP</div>
+                    <div class="period">2025</div>
                     <div class="hours">Carga horária: 10h</div>
                 </div>
-                
+
+                <div class="complementary-education-item">
+                    <div class="course-title">Curso Inteligência Artificial aplicada à Visão Computacional</div>
+                    <div class="institution">Qualifact</div>
+                    <div class="period">2024</div>
+                    <div class="hours">Carga horária: 240h</div>
+                </div>
+
+                <div class="complementary-education-item">
+                    <div class="course-title">Blockchain-Contratos Inteligentes</div>
+                    <div class="institution">Qualifact</div>
+                    <div class="period">2025</div>
+                    <div class="hours">Carga horária: 30h</div>
+                </div>
+
+                <div class="complementary-education-item">
+                    <div class="course-title">Explorando aplicações dinâmicas e escaláveis na Nuvem: BaaS para apps Android e iOS</div>
+                    <div class="institution">Qualifact</div>
+                    <div class="period">2025</div>
+                    <div class="hours">Carga horária: 30h</div>
+                </div>
+
+                <div class="complementary-education-item">
+                    <div class="course-title">Extensão universitária em Acessibilidade na Educação Profissional e Tecnológica e na Educação Superior</div>
+                    <div class="institution">Universidade Federal de Santa Maria, UFSM</div>
+                    <div class="period">2025</div>
+                    <div class="hours">Carga horária: 80h</div>
+                </div>
+
+                <div class="complementary-education-item">
+                    <div class="course-title">Extensão universitária em História e arqueologia da colonização grega na Croácia</div>
+                    <div class="institution">Universidade de São Paulo, USP</div>
+                    <div class="period">2025</div>
+                    <div class="hours">Carga horária: 10h</div>
+                </div>
+
                 <div class="complementary-education-item">
                     <div class="course-title">Extensão universitária em Inteligência Artificial Generativa em Marketing</div>
                     <div class="institution">Universidade de São Paulo, USP</div>
-                    <div class="period">2025 - 2025</div>
+                    <div class="period">2025</div>
                     <div class="hours">Carga horária: 10h</div>
                 </div>
-                
+
                 <div class="complementary-education-item">
                     <div class="course-title">Extensão universitária em Inteligência Emocional e Inteligência Artificial</div>
                     <div class="institution">Universidade Federal de Santa Maria, UFSM</div>
-                    <div class="period">2025 - 2025</div>
+                    <div class="period">2025</div>
                     <div class="hours">Carga horária: 80h</div>
                 </div>
-                
+
                 <div class="complementary-education-item">
                     <div class="course-title">Extensão universitária em Editoração na Escola</div>
                     <div class="institution">Universidade Federal de Santa Maria, UFSM</div>
-                    <div class="period">2025 - 2025</div>
+                    <div class="period">2025</div>
                     <div class="hours">Carga horária: 60h</div>
                 </div>
-                
+
                 <div class="complementary-education-item">
                     <div class="course-title">Extensão universitária em Arquiteturas de Redes para Iniciantes com Wireshark</div>
                     <div class="institution">Universidade Federal de Santa Maria, UFSM</div>
-                    <div class="period">2025 - 2025</div>
+                    <div class="period">2025</div>
                     <div class="hours">Carga horária: 20h</div>
                 </div>
-                
+
                 <div class="complementary-education-item">
                     <div class="course-title">Extensão universitária em Investigação de Insumos Agrícolas Ilegais</div>
                     <div class="institution">Universidade de São Paulo, USP</div>
-                    <div class="period">2025 - 2025</div>
+                    <div class="period">2025</div>
                     <div class="hours">Carga horária: 30h</div>
                 </div>
-                
+
                 <div class="complementary-education-item">
                     <div class="course-title">Extensão universitária em Da literatura à vida conjugal: o casal Liev Tolstói e Sofia Tolstáia</div>
                     <div class="institution">Universidade de São Paulo, USP</div>
-                    <div class="period">2025 - 2025</div>
+                    <div class="period">2025</div>
                     <div class="hours">Carga horária: 10h</div>
                 </div>
-                
+
                 <div class="complementary-education-item">
                     <div class="course-title">Introdução às Redes Complexas, com aplicações, utilizando Python e IA/LLM</div>
                     <div class="institution">Universidade de São Paulo, USP</div>
-                    <div class="period">2025 - 2025</div>
-					<div class="period">Código de Controle: EJCM-9TVN-PNMR-7TJT</div>
+                    <div class="period">2025</div>
                     <div class="hours">Carga horária: 20h</div>
+                    <div class="period">Código de Controle: EJCM-9TVN-PNMR-7TJT</div>
                 </div>
-                
+
                 <div class="complementary-education-item">
                     <div class="course-title">Introdução aos Grafos Infinitos</div>
                     <div class="institution">Universidade de São Paulo, USP</div>
-                    <div class="period">2025 - 2025</div>
+                    <div class="period">2025</div>
                     <div class="hours">Carga horária: 15h</div>
                 </div>
-                
+
                 <div class="complementary-education-item">
                     <div class="course-title">Introdução à literatura chinesa traduzida</div>
                     <div class="institution">Universidade de São Paulo, USP</div>
-                    <div class="period">2025 - 2025</div>
+                    <div class="period">2025</div>
                     <div class="hours">Carga horária: 10h</div>
                 </div>
-                
+
                 <!-- 2024 -->
                 <div class="complementary-education-item">
                     <div class="course-title">Extensão universitária em Compliance Concorrencial</div>
                     <div class="institution">Escola Nacional de Administração Pública, ENAP</div>
-                    <div class="period">2024 - 2024</div>
+                    <div class="period">2024</div>
                     <div class="hours">Carga horária: 22h</div>
                 </div>
-	   
+
                 <!-- 2023 -->
                 <div class="complementary-education-item">
                     <div class="course-title">Extensão universitária em Integridade acadêmica na era da inteligência artificial</div>
                     <div class="institution">Universidade Federal de São Paulo, UNIFESP</div>
-                    <div class="period">2023 - 2023</div>
+                    <div class="period">2023</div>
                     <div class="hours">Carga horária: 1h</div>
                 </div>
-                
+
                 <div class="complementary-education-item">
                     <div class="course-title">Extensão universitária em Diálogos sobre Politica de Educação: Inovação Tecnológica e Digital na Gest</div>
                     <div class="institution">Universidade Federal de São Paulo, UNIFESP</div>
-                    <div class="period">2023 - 2023</div>
+                    <div class="period">2023</div>
                     <div class="hours">Carga horária: 2h</div>
                 </div>
-                
+
                 <div class="complementary-education-item">
                     <div class="course-title">Extensão universitária em Docência e inteligência artificial</div>
                     <div class="institution">Universidade Federal de São Paulo, UNIFESP</div>
-                    <div class="period">2023 - 2023</div>
+                    <div class="period">2023</div>
                     <div class="hours">Carga horária: 2h</div>
                 </div>
-                
+
                 <div class="complementary-education-item">
                     <div class="course-title">Extensão universitária em Assistente de Produção Cultural</div>
                     <div class="institution">Instituto Federal de Educação, Ciência e Tecnologia do Rio Grande do Sul, IFRS</div>
-                    <div class="period">2023 - 2023</div>
+                    <div class="period">2023</div>
                     <div class="hours">Carga horária: 200h</div>
                 </div>
-                
+
                 <div class="complementary-education-item">
                     <div class="course-title">Auxiliar Pedagógico</div>
                     <div class="institution">Instituto Federal de Educação, Ciência e Tecnologia do Rio Grande do Sul, IFRS</div>
-                    <div class="period">2023 - 2023</div>
+                    <div class="period">2023</div>
                     <div class="hours">Carga horária: 200h</div>
                 </div>
-                
+
                 <div class="complementary-education-item">
                     <div class="course-title">Indicações Geográficas e Marcas Coletivas</div>
                     <div class="institution">Instituto Nacional da Propriedade Industrial, INPI</div>
-                    <div class="period">2023 - 2023</div>
+                    <div class="period">2023</div>
                     <div class="hours">Carga horária: 20h</div>
                 </div>
-                
+
                 <div class="complementary-education-item">
                     <div class="course-title">14º Seminário de Proteção à Privacidade e aos Dados Pessoais</div>
                     <div class="institution">Comitê Gestor da Internet, CGI.BR</div>
-                    <div class="period">2023 - 2023</div>
+                    <div class="period">2023</div>
                     <div class="hours">Carga horária: 24h</div>
                 </div>
-                
+
                 <div class="complementary-education-item">
                     <div class="course-title">Software: como e por que registrar</div>
                     <div class="institution">Instituto Nacional da Propriedade Industrial, INPI</div>
-                    <div class="period">2023 - 2023</div>
+                    <div class="period">2023</div>
                     <div class="hours">Carga horária: 8h</div>
                 </div>
-                
+
                 <div class="complementary-education-item">
                     <div class="course-title">INOVANDO NA GESTÃO DE PROJETOS</div>
                     <div class="institution">Escola Nacional de Administração Pública, ENAP</div>
-                    <div class="period">2023 - 2023</div>
+                    <div class="period">2023</div>
                     <div class="hours">Carga horária: 25h</div>
                 </div>
-                
+
                 <div class="complementary-education-item">
                     <div class="course-title">Tratado de Cooperação em Matéria de Patentes (Fase Nacional)</div>
                     <div class="institution">Instituto Nacional da Propriedade Industrial, INPI</div>
-                    <div class="period">2023 - 2023</div>
+                    <div class="period">2023</div>
                     <div class="hours">Carga horária: 3h</div>
                 </div>
-                
+
                 <div class="complementary-education-item">
                     <div class="course-title">Uso da Propriedade Intelectual em Negócios de Base Tradicional</div>
                     <div class="institution">World Intellectual Property Organization, WIPO, Suiça</div>
-                    <div class="period">2023 - 2023</div>
+                    <div class="period">2023</div>
                     <div class="hours">Carga horária: 12h</div>
                 </div>
-                
+
                 <!-- 2022 -->
                 <div class="complementary-education-item">
                     <div class="course-title">Governança Corporativa</div>
                     <div class="institution">Fundação Getúlio Vargas, FGV</div>
-                    <div class="period">2022 - 2022</div>
+                    <div class="period">2022</div>
                     <div class="hours">Carga horária: 36h</div>
                 </div>
-                
+
                 <div class="complementary-education-item">
                     <div class="course-title">Planejamento e Gestão de Projetos com o método Scrum</div>
                     <div class="institution">Universidade Federal de São Paulo, UNIFESP</div>
-                    <div class="period">2022 - 2022</div>
+                    <div class="period">2022</div>
                     <div class="hours">Carga horária: 8h</div>
                 </div>
-                
+
                 <!-- 2021 -->
                 <div class="complementary-education-item">
                     <div class="course-title">Extensão universitária em Temas Emergentes e Ensino Híbrido para a Educação Básica</div>
                     <div class="institution">Universidade Federal de Santa Maria, UFSM</div>
-                    <div class="period">2021 - 2021</div>
+                    <div class="period">2021</div>
                     <div class="hours">Carga horária: 153h</div>
                 </div>
-                
+
                 <div class="complementary-education-item">
                     <div class="course-title">Extensão universitária em Cybersecurity Essentials</div>
                     <div class="institution">Cisco do Brasil, CISCO</div>
-                    <div class="period">2021 - 2021</div>
+                    <div class="period">2021</div>
                     <div class="hours">Carga horária: 30h</div>
                 </div>
-                
+
                 <div class="complementary-education-item">
                     <div class="course-title">Extensão universitária em V Curso sobre Cannabis Medicinal</div>
                     <div class="institution">Universidade Federal de São Paulo, UNIFESP</div>
-                    <div class="period">2021 - 2021</div>
+                    <div class="period">2021</div>
                     <div class="hours">Carga horária: 50h</div>
                 </div>
-                
+
                 <div class="complementary-education-item">
                     <div class="course-title">Extensão universitária em Orientalismo e Traduções científicas</div>
                     <div class="institution">Universidade Federal de São Paulo, UNIFESP</div>
-                    <div class="period">2021 - 2021</div>
+                    <div class="period">2021</div>
                     <div class="hours">Carga horária: 20h</div>
                 </div>
-                
+
                 <div class="complementary-education-item">
                     <div class="course-title">Extensão universitária em EDUCAÇÃO FISCAL E CIDADANIA 9ª Edição</div>
                     <div class="institution">Universidade Federal do Rio Grande do Sul, UFRGS</div>
-                    <div class="period">2021 - 2021</div>
+                    <div class="period">2021</div>
                     <div class="hours">Carga horária: 60h</div>
                 </div>
-                
+
                 <div class="complementary-education-item">
                     <div class="course-title">Preparação de Gestores Públicos</div>
                     <div class="institution">Escola Nacional de Administração Pública, ENAP</div>
-                    <div class="period">2021 - 2021</div>
+                    <div class="period">2021</div>
                     <div class="hours">Carga horária: 210h</div>
                 </div>
-                
+
                 <!-- 2020 -->
                 <div class="complementary-education-item">
                     <div class="course-title">Extensão universitária em Contratos</div>
                     <div class="institution">Instituto Federal de Educação, Ciência e Tecnologia do Rio Grande do Sul, IFRS</div>
-                    <div class="period">2020 - 2020</div>
+                    <div class="period">2020</div>
                     <div class="hours">Carga horária: 20h</div>
                 </div>
-                
+
                 <!-- 2019 -->
                 <div class="complementary-education-item">
                     <div class="course-title">CURSO GERAL DE PROPRIEDADE INTELECTUAL À DISTÂNCIA</div>
                     <div class="institution">Instituto Nacional da Propriedade Industrial, INPI</div>
-                    <div class="period">2019 - 2019</div>
+                    <div class="period">2019</div>
                     <div class="hours">Carga horária: 75h</div>
                 </div>
-                
+
                 <!-- 2017 -->
                 <div class="complementary-education-item">
                     <div class="course-title">DL101PCT: Introdução ao Tratado de Cooperação em matéria de Patentes</div>
                     <div class="institution">Organisation Mondiale de La Propriete Intellectuelle, OMPI</div>
-                    <div class="period">2017 - 2017</div>
+                    <div class="period">2017</div>
                     <div class="hours">Carga horária: 40h</div>
                 </div>
-                
+
                 <!-- 2012 -->
                 <div class="complementary-education-item">
                     <div class="course-title">Curso Geral de Propriedade Intelectual</div>
                     <div class="institution">World Intellectual Property Organization, WIPO</div>
-                    <div class="period">2012 - 2012</div>
+                    <div class="period">2012</div>
                     <div class="hours">Carga horária: 75h</div>
                 </div>
-                
+
                 <!-- 2011 -->
                 <div class="complementary-education-item">
                     <div class="course-title">Fundamentos da Ciência Econômica</div>
                     <div class="institution">Instituto Legislativo Brasileiro, ILB</div>
-                    <div class="period">2011 - 2011</div>
+                    <div class="period">2011</div>
                     <div class="hours">Carga horária: 80h</div>
                 </div>
-                
+
                 <!-- 2008 -->
                 <div class="complementary-education-item">
                     <div class="course-title">Educação Fiscal</div>
                     <div class="institution">Escola Superior de Educação Fazendária, ESAF</div>
-                    <div class="period">2008 - 2008</div>
+                    <div class="period">2008</div>
                     <div class="hours">Carga horária: 120h</div>
                 </div>
             </section>
@@ -1483,14 +1300,135 @@
                 </div>
             </section>
         </main>
+        
+        <!-- Contador de Visitas -->
+        <div class="counter-container">
+            <a title="tabela fipe" href="https://www.tabelafipeweb.com.br">
+                <img src="https://contador-gratis.com/contadores-de-visitas/260725105258463.gif" alt="Contador de Visitas">
+            </a>
+            <div>
+                <a href="https://www.contador-gratis.com/" title="contador de visitas">Contador de Visitas</a>
+            </div>
+        </div>
     </div>
 
+    <!-- Botão de Impressão -->
     <button class="print-btn" onclick="window.print()" title="Imprimir Currículo">
         <i class="fas fa-print"></i>
     </button>
 
+    <!-- Scripts -->
+    <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
     <script>
-        // Adiciona animação suave ao rolar a página
+        particlesJS("particles-js", {
+            "particles": {
+                "number": {
+                    "value": 80,
+                    "density": {
+                        "enable": true,
+                        "value_area": 800
+                    }
+                },
+                "color": {
+                    "value": "#ffffff"
+                },
+                "shape": {
+                    "type": "circle",
+                    "stroke": {
+                        "width": 0,
+                        "color": "#000000"
+                    },
+                    "polygon": {
+                        "nb_sides": 5
+                    }
+                },
+                "opacity": {
+                    "value": 0.5,
+                    "random": false,
+                    "anim": {
+                        "enable": false,
+                        "speed": 1,
+                        "opacity_min": 0.1,
+                        "sync": false
+                    }
+                },
+                "size": {
+                    "value": 3,
+                    "random": true,
+                    "anim": {
+                        "enable": false,
+                        "speed": 40,
+                        "size_min": 0.1,
+                        "sync": false
+                    }
+                },
+                "line_linked": {
+                    "enable": true,
+                    "distance": 150,
+                    "color": "#ffffff",
+                    "opacity": 0.4,
+                    "width": 1
+                },
+                "move": {
+                    "enable": true,
+                    "speed": 2,
+                    "direction": "none",
+                    "random": false,
+                    "straight": false,
+                    "out_mode": "out",
+                    "bounce": false,
+                    "attract": {
+                        "enable": false,
+                        "rotateX": 600,
+                        "rotateY": 1200
+                    }
+                }
+            },
+            "interactivity": {
+                "detect_on": "canvas",
+                "events": {
+                    "onhover": {
+                        "enable": true,
+                        "mode": "grab"
+                    },
+                    "onclick": {
+                        "enable": true,
+                        "mode": "push"
+                    },
+                    "resize": true
+                },
+                "modes": {
+                    "grab": {
+                        "distance": 140,
+                        "line_linked": {
+                            "opacity": 1
+                        }
+                    },
+                    "bubble": {
+                        "distance": 400,
+                        "size": 40,
+                        "duration": 2,
+                        "opacity": 8,
+                        "speed": 3
+                    },
+                    "repulse": {
+                        "distance": 200,
+                        "duration": 0.4
+                    },
+                    "push": {
+                        "particles_nb": 4
+                    },
+                    "remove": {
+                        "particles_nb": 2
+                    }
+                }
+            },
+            "retina_detect": true
+        });
+    </script>
+    
+    <script>
+        // Animação suave ao rolar a página
         document.addEventListener('DOMContentLoaded', function() {
             const sections = document.querySelectorAll('.section');
             
@@ -1515,21 +1453,3 @@
     </script>
 </body>
 </html>
-
-<!-- Inicio codigo Contador -->
-<div align="center"><a title="tabela fipe" href="https://www.tabelafipeweb.com.br"><img src="https://contador-gratis.com/contadores-de-visitas/260725105258463.gif"></a><div><a href="https://www.contador-gratis.com/" title="contador de visitas">Contador de Visitas</a></div></div>
-<!-- Fim do codigo Contador -->
-
-
-
-
-
-
-
-
-
-
-
-
-
-
